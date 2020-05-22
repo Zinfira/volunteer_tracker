@@ -1,6 +1,6 @@
 require "spec_helper"
 
-# describe Volunteer do
+describe Volunteer do
 #   describe '#name' do
 #     it 'returns the name of the volunteer' do
 #       test_volunteer = Volunteer.new({:name => 'Jane', :project_id => 1, :id => nil})
@@ -23,10 +23,11 @@ require "spec_helper"
 #     end
 #   end
 
-#   context '.all' do
-#     it 'is empty to start' do
-#       expect(Volunteer.all).to eq []
-#     end
+  context '.all' do
+    it 'is empty to start' do
+      expect(Volunteer.all).to eq []
+    end
+  end
 
 #     it 'returns all volunteers' do
 #       volunteer1 = Volunteer.new({:name => 'Jane', :project_id => 1, :id => nil})
@@ -54,4 +55,4 @@ require "spec_helper"
 #       expect(Volunteer.find(volunteer1.id)).to eq volunteer1
 #     end
 #   end
-# end
+end
