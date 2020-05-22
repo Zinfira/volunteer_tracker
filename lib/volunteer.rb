@@ -40,4 +40,11 @@ class  Volunteer
   def delete
     DB.exec("DELETE FROM volunteers WHERE id = #{@id};")
   end
+
+  def update(attributes)
+    if (attributes.has_key?(:name)) && (attributes.fetch(:name) != nil)
+      @name = attributes.fetch(:name)
+      DB.exec("UPDATE volunteers SET name = '#{@name}' WHERE id = #{@id};")
+    end
+  end
 end
