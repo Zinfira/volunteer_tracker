@@ -10,12 +10,15 @@
 <h3>No projects yet.</h3>
 <% end %>
 <br>
-<h3>Create a new project</h3>
+<h4>Create a new project</h4>
 <form action="/tracker/projects" method="post">
   <div class="form-group">
     <label for="new_project">Enter a Project</label>
-    <input type="text" name="new_project">
+    <input type="text" name="new_project" required>
   </div>
   <button type="submit" class="btn btn-success">Add a new Project</button>
 </form>
+
+<br>
+<a href="/tracker">Return to home page</a>
 

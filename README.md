@@ -11,7 +11,8 @@ _This application tracks projects and volunteers working on them. Each volunteer
 ## Specification
 | Specs | Example Input | Example Output |
 |-------|---------------|----------------|
-
+| As a volunteer, user is able to see list of available projects | On home page click 'I am a volunteer' | 'List of available projects: ' |
+| As a manager, user is able to add a new project | Enter the title of new project to the input form 'Teaching Kids to Code' and click to 'Add a new project' button | "List of available projects: 'Teaching Kids to Code'"|
 
 ## Setup/Installation Requirements
 
@@ -39,7 +40,7 @@ _If you have any issues with the program or you have any suggestions, email me <
 
 ## Technologies Used
 
-_Ruby version 2.6.5_, Sinatra, Capybara and Heroku
+_Ruby version, Sinatra, Capybara, Postgres_
 
 
 ### License
