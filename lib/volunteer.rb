@@ -36,4 +36,8 @@ class  Volunteer
     id = volunteer.fetch("id").to_i
     Volunteer.new({:name => name, :project_id => project_id, :id => id})
   end
+
+  def delete
+    DB.exec("DELETE FROM volunteers WHERE id = #{@id};")
+  end
 end
