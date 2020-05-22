@@ -12,7 +12,7 @@ class Project
     projects = []
     returned_projects.each() do |project|
       title = project.fetch("title")
-      id = project.fetch("id")
+      id = project.fetch("id").to_i
       projects.push(Project.new({:title => title, :id => id}))
     end
     projects
@@ -20,7 +20,7 @@ class Project
 
   def save
     result = DB.exec("INSERT INTO projects (title) VALUES ('#{@title}') RETURNING id;")
-    id = result.first().fetch("id").to_i
+    @id = result.first().fetch("id").to_i 
   end
 
   def ==(project_to_compare)
