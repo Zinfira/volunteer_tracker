@@ -46,15 +46,15 @@ get('/tracker/projects/:id/edit') do
 end
 
 patch('/tracker/projects/:id') do
-  @project = Project.find(params[:id].to_i())
-  @project.update(params[:new_project])
-  @projetss = Project.all
+  project = Project.find(params[:id].to_i)
+  project.update({:title => params[:new_title], :id => nil})
+  @projects = Project.all
   erb(:projects)
 end
 
 delete('/tracker/projects/:id') do
-  @project = Project.find(params[:id].to_i())
+  @project = Project.find(params[:id].to_i)
   @project.delete()
-
+  @projects = Project.all
   erb(:projects)
 end
