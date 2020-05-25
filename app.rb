@@ -55,7 +55,7 @@ patch('/tracker/projects/:id') do
   project.update({:title => params[:new_title], :id => nil})
   @projects = Project.all
   @show = false
-  erb(:project)
+  redirect to ('/tracker/projects')
 end
 
 delete('/tracker/projects/:id') do
