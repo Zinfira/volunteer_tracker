@@ -34,6 +34,7 @@ Next, confirm that you navigated to the Anagrams_and_Antigrams project directory
 Then, run at the project's root directory via Terminal the following commands:
 * >$ gem install bundler
 * >$ bundle install
+* >$ ruby app.rb
 
 
 ## Known Bugs
@@ -48,7 +49,7 @@ _If you have any issues with the program or you have any suggestions, email me <
 
 ## Technologies Used
 
-_Ruby version, Sinatra, Capybara, Postgres_
+_Ruby, Sinatra, Capybara, Postgres_
 
 
 ### License
