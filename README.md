@@ -13,6 +13,14 @@ _This application tracks projects and volunteers working on them. Each volunteer
 |-------|---------------|----------------|
 | As a volunteer, user is able to see list of available projects | On home page click 'I am a volunteer' | 'List of available projects: ' |
 | As a manager, user is able to add a new project | Enter the title of new project to the input form 'Teaching Kids to Code' and click to 'Add a new project' button | "List of available projects: 'Teaching Kids to Code'"|
+| As a manager, user is able to update the project | Enter "Helping in the hospital" and click 'Update Project' button | "List of available projects: 'Helping in the hospital'" |
+| As a manager, user is able to delete the project | Click 'Delete Project' button | "List of available projects: ' _No projects yet._'" |
+| As a manager, user is able to see a list of all volunteers | Click to the link in projects | "List of volunteers: Zinfira" |
+| As a manager, user is able to add volunteers for the created project | Click 'Add a new Volunteer', enter the name of volunteer and submit | List of Volunteers for "Teaching Kids to Code" project: __Zinfira__ |
+| As a manager, user is able to see volunteers for the project | Click to the project | List of Volunteers for "Teaching Kids to Code" project: __Zinfira__ |
+| As a manager user is able to update volunteers | Enter "Nik" and click 'Update Volunteer' button | List of Volunteers for "Teaching Kids to Code" project: __Nik__ |
+| As a manager user is able to delete volunteers | Click 'Delete Volunteer' button | List of Volunteers for "Teaching Kids to Code" project: _There are no volunteers yet._|
+
 
 ## Setup/Installation Requirements
 
