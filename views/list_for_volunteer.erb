@@ -3,11 +3,11 @@
 <h3>List of available projects</h3>
 <ul>
   <% @projects.each do |project| %>
-  <li><a href="/tracker/projects/<%=project.id%>"><%=project.title%></a></li>
+  <li><%=project.title%></li>
   <% end %>
 </ul>
 <% else %>
 <h3>No projects yet.</h3>
 <% end %>
 <br>
-<a href="/tracker">Return to home page</a>
+<a href="/tracker" class="btn btn-primary">Return to home page</a>

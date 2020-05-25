@@ -1,4 +1,4 @@
-<h3>List of Volunteers for <%= @project.title %> project: </h3>
+<h3>List of Volunteers for "<%= @project.title %>" project: </h3>
 
 <% if @project.volunteers.any? %>
   <ul>
@@ -9,14 +9,14 @@
     <% end %>
   </ul>
 <% else %>
-  <h3>There no volunteers yet.</h3>
+  <h3>There are no volunteers yet.</h3>
 <% end %>
 
 <% if @show %>
   <h3>Add a new Volunteer:</h3>
   <form action="/tracker/projects/<%= @project.id %>/volunteers" method="post">
-    <input type="text" name="new_volunteer" placeholder="new volunteer">
-    <button type="submit" class="btn btn-primary">Add a new Volunteer</button>
+    <input type="text" name="new_volunteer" required>
+    <button type="submit" class="btn btn-success">Add a new Volunteer</button>
   </form>
 <% else %>
   <form action="/tracker/projects/<%= @project.id %>" method="get">
@@ -27,4 +27,4 @@
 
 <br><br>
 <p><a href="/tracker/projects/<%= @project.id %>/edit">Edit Project</a></p>
-<p><a href="/tracker/projects">Return to project list</a></p>
+<p><a href="/tracker/projects">Return to list of projects</a></p>
