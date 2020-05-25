@@ -18,7 +18,7 @@ end
 
 get('/tracker/volunteer') do
   @projects = Project.all
-  erb(:volunteer_list)
+  erb(:list_for_volunteer)
 end
 
 get('/tracker/projects') do
@@ -28,7 +28,7 @@ get('/tracker/projects') do
 end
 
 post('/tracker/projects') do
-  title = params[:new_project]
+  title = params[:title]
   project = Project.new({:title => title, :id => nil})
   project.save()
   @projects = Project.all
@@ -66,9 +66,8 @@ delete('/tracker/projects/:id') do
 end
 
 get('/tracker/volunteers') do
-  @projects = Project.all
   @volunteers = Volunteer.all
-  erb(:new_volunteer)
+  erb(:volunteers)
 end
 
 get('/tracker/projects/:id/volunteers/:volunteer_id') do
